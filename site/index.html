@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101619"><meta name="description" content="Play the original Beneath a Steel Sky adventure in your browser. Original CD edition, powered by ScummVM.">
+<title>Beneath a Steel Sky · Browser Edition</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header><div class="brand">BENEATH A <strong>STEEL SKY</strong></div><span class="edition">CD EDITION · WITH SPEECH</span><button id="sound" disabled>Enable sound</button><button id="help">Controls</button><button id="fullscreen">Fullscreen</button></header>
+<main id="stage">
+<canvas id="canvas" tabindex="0" aria-label="Beneath a Steel Sky game. Use the mouse to explore; F5 opens the game menu." oncontextmenu="event.preventDefault()"></canvas>
+<section id="start-screen" aria-labelledby="title">
+<div class="start-inner"><p class="eyebrow">REVOLUTION SOFTWARE · 1994</p><h1 id="title"><span>BENEATH A</span>STEEL<br>SKY<span class="rule"></span></h1><p class="intro">You are Robert Foster.<br>Escape Union City. Discover the truth.</p><button id="play" class="primary">Play the original</button><p class="start-note">Full game · Original voices · Subtitles</p></div>
+</section>
+<section id="download-modal" role="status" aria-live="polite" hidden><div id="download-modal-title"><h2>Loading the game…</h2></div><div id="download-modal-progress"><div id="download-modal-progress-fill"></div></div><p id="download-modal-progress-text">Preparing download</p><p id="download-modal-speed-text"></p></section>
+<section id="error-panel" hidden><h2>Unable to start the game</h2><p id="error-text"></p><button onclick="location.reload()">Try again</button></section>
+</main>
+<footer><p><b>Left click</b> Walk / look <span>·</span> <b>Right click</b> Use / talk <span>·</span> <b>Top edge</b> Inventory</p><button id="menu" disabled>Save / load · F5</button></footer>
+<p class="credit">Game © Revolution Software Ltd. Browser engine: <a href="https://www.scummvm.org/" target="_blank" rel="noreferrer">ScummVM</a> / <a href="https://github.com/chkuendig/scummvm-demo" target="_blank" rel="noreferrer">Web port</a>. <a href="credits.html">Credits &amp; licences</a></p>
+</div>
+<dialog id="controls"><button class="close" aria-label="Close controls">Close</button><h2>Welcome to Union City.</h2><p>A point-and-click adventure. Explore each scene, collect objects and talk to the people you meet.</p><dl><dt>Left mouse button</dt><dd>Walk to a spot, or look at an object.</dd><dt>Right mouse button</dt><dd>Interact with objects and talk to people.</dd><dt>Move to the top edge</dt><dd>Open your inventory. Select an item, then use it on a person or object.</dd><dt>F5 / Save &amp; load button</dt><dd>Open the original game menu to save, load or change sound settings. Speech and subtitles are enabled by default.</dd><dt>Escape</dt><dd>Skip the opening sequence or close a menu.</dd></dl><p>If the game is silent, click Enable sound above the game. Use Save in the game menu before leaving. Saves are stored in this browser; clearing site data removes them.</p><p>A mouse and keyboard are recommended. Touch behaviour depends on the browser and the engine’s touch settings.</p><button class="primary close">Back to game</button></dialog>
+<script src="app.js"></script>
+</body></html>
