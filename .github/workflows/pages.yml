@@ -1,0 +1,49 @@
+name: Publish CD game to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Cache verified engine and CD downloads
+        uses: actions/cache@v4
+        with:
+          path: .asset-cache
+          key: bass-cd-assets-${{ hashFiles('assets.lock.json') }}
+      - name: Build the complete CD browser game
+        run: python scripts/build.py
+      - name: Check game resources and browser integration
+        run: node scripts/check.mjs
+      - name: Upload complete Pages site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check Pages configuration
+        uses: actions/configure-pages@v5
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4
