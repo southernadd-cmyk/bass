@@ -1,0 +1,56 @@
+{
+  "scummvm.js": {
+    "url": "https://scummvm.kuendig.io/scummvm.js",
+    "sha256": "505a7058c6d98032cb91045f57582f85635951ce1fe2ad43d04b7769d596f309"
+  },
+  "scummvm.wasm": {
+    "url": "https://scummvm.kuendig.io/scummvm.wasm",
+    "sha256": "a31d2162bd4032bc475fe4fe90a86805a3f8750ea6d9b4fdde4321995f9489fa"
+  },
+  "data/translations.dat": {
+    "url": "https://scummvm.kuendig.io/data/translations.dat",
+    "sha256": "88e4a57aa5d58b213f6a066518eb8a1cb1046132770987cc7dd8b06ce80e0156"
+  },
+  "data/scummmodern.zip": {
+    "url": "https://scummvm.kuendig.io/data/scummmodern.zip",
+    "sha256": "1b852cac8b09aa918f33be618a75f75ab3594a3499a167e9a090e09bb82a21e7"
+  },
+  "data/scummclassic.zip": {
+    "url": "https://scummvm.kuendig.io/data/scummclassic.zip",
+    "sha256": "36c07a1f2fcfd70b44d2eb90e8abf154e4f31aace65f90f79318a751292086af"
+  },
+  "data/fonts.dat": {
+    "url": "https://scummvm.kuendig.io/data/fonts.dat",
+    "sha256": "b25946aa6ff9c7bbef9d6e5a8fa7b33cf1230fbddfaa5262e19288387c493b95"
+  },
+  "data/sky.cpt": {
+    "url": "https://scummvm.kuendig.io/data/sky.cpt",
+    "sha256": "4c457373415325ea039d7a3d4f1211f7bbedd83d5bf85b94afd14cb4bdd263d2"
+  },
+  "data/vkeybd_default.zip": {
+    "url": "https://scummvm.kuendig.io/data/vkeybd_default.zip",
+    "sha256": "2704048b87cc4a0915cdbffa98cd7b4ba7a195a96a76c57d5912fbcc24cc2cd2"
+  },
+  "data/plugins/libsky.so": {
+    "url": "https://scummvm.kuendig.io/data/plugins/libsky.so",
+    "sha256": "2e9e2e98f6185ab167efd03ac7b166256da6c224044ff29875306f5fd7b5031d"
+  },
+  "game": {
+    "url": "https://www.dosgamesarchive.com/file.php?id=2393",
+    "sha256": "12b48fc71bc5119083b09f193f87e23bb5750c64e3372e0587559fae8bedd2e4",
+    "files": {
+      "sky.dsk": {
+        "sha256": "5fd820e707ad2f65da64fc1eca06feedf5dc7185f8c198d1bbf36172f5dbd0d3",
+        "size": 72429382
+      },
+      "sky.dnr": {
+        "sha256": "0c771c7e0e4c817b21b110093268cf6792e0ef398f808e6c73e6aff9d1f2f210",
+        "size": 40796
+      },
+      "readme.txt": {
+        "sha256": "7e6cba51faa8b97b0b40f5682e893a4cffbb37a1c1cf14fa136cbd2a968d2f67",
+        "size": 1569
+      }
+    }
+  }
+}
